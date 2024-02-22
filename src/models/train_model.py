@@ -12,7 +12,7 @@ from utils import save_metrics_and_params, save_model
 
 
 root_dir = Path(__file__).resolve().parents[1]  # root directory absolute path
-data_dir = "data/external/HMI_data"
+data_dir = "HMI_data"
 data_yaml_path = os.path.join(data_dir, "data.yaml")
 metrics_path = os.path.join(root_dir, 'reports/train_metrics.json')
 
