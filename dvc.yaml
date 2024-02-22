@@ -1,0 +1,21 @@
+stages:
+  train:
+    cmd: python src/models/train_model.py
+    deps:
+    - HMI_data
+    - src/models/train_model.py
+    - src/models/utils.py
+    - params.yaml
+    outs:
+    - models/best.pt
+    - reports/train_params.yaml:
+        cache: true
+    metrics:
+    - reports/train_metrics.csv:
+        cache: true
+  test:
+    cmd: python src/models/predict_model.py
+    deps:
+      - HMI_data
+      - models/best.pt
+      - src/models/predict_model.py

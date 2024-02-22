@@ -1,0 +1,10 @@
+# external requirements
+click
+# Sphinx
+# coverage
+# awscli
+# flake8
+dvc==3.42.0
+mlflow==2.2.2
+dvc-gdrive
+
