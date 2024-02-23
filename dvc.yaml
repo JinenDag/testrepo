@@ -3,6 +3,7 @@ stages:
     cmd: python src/models/train_model.py
     deps:
     - HMI_data
+    - HMI_data.dvc
     - src/models/train_model.py
     - src/models/utils.py
     - params.yaml

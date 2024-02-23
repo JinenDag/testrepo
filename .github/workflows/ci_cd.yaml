@@ -2,7 +2,7 @@ name: CML & DVC
 on: [push]
 jobs:
   train-and-report:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     # container: docker://ghcr.io/iterative/cml:0-dvc2-base1
     steps:
       - uses: actions/checkout@v3
