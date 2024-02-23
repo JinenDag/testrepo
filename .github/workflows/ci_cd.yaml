@@ -16,8 +16,6 @@ jobs:
       - name: Install dependencies
         run: pip3 install -r requirements.txt
       - name: Pull data from DVC
-        run: |
-          dvc pull data
+        run: dvc pull data
       - name: Reproduce workflow
-        run: |
-          dvc repro --allow-missing --dry
+        run: dvc repro --allow-missing --dry
