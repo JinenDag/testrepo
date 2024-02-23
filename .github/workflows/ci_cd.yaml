@@ -14,7 +14,7 @@ jobs:
       - name: Install yolo
         run: pip3 install ultralytics==8.0.58
       - name: Install dependencies
-        run: pip3 install -r detection_model/requirements.txt
+        run: pip3 install -r requirements.txt
       - name: Pull data from DVC
         run: |
           dvc pull data
