@@ -1,0 +1,51 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/models/train_model.py
+    deps:
+    - path: HMI_data
+      hash: md5
+      md5: 75a218b1b26d57431e6b8f90e877484d.dir
+      size: 5240989
+      nfiles: 144
+    - path: params.yaml
+      hash: md5
+      md5: 52eac185245a0595c5b1e8925bba9eb9
+      size: 241
+    - path: src/models/train_model.py
+      hash: md5
+      md5: 6a11016f0fd3cd042bbb53806767d98c
+      size: 2056
+    - path: src/models/utils.py
+      hash: md5
+      md5: 73abd0ecac6e46f7dbc8806d67b6d6e9
+      size: 1157
+    outs:
+    - path: models/best.pt
+      hash: md5
+      md5: df7a0a0f6e9a693567dd6ebfe02be069
+      size: 6242211
+    - path: reports/args.yaml
+      hash: md5
+      md5: 2359a65ef69ae85b78bc0b69caad6724
+      size: 1487
+    - path: reports/results.csv
+      hash: md5
+      md5: 67d146ce430c6f38072cede9c7ee597b
+      size: 2022
+  test:
+    cmd: python src/models/predict_model.py
+    deps:
+    - path: HMI_data
+      hash: md5
+      md5: 75a218b1b26d57431e6b8f90e877484d.dir
+      size: 5240989
+      nfiles: 144
+    - path: models/best.pt
+      hash: md5
+      md5: df7a0a0f6e9a693567dd6ebfe02be069
+      size: 6242211
+    - path: src/models/predict_model.py
+      hash: md5
+      md5: e967dc3539884ead21a25ad62c5c1302
+      size: 510

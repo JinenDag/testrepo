@@ -1,6 +1,6 @@
 outs:
-- md5: 754673185a984ae70f642bac7591e7ec.dir
-  size: 5634995
+- md5: 75a218b1b26d57431e6b8f90e877484d.dir
+  size: 5240989
   nfiles: 144
   hash: md5
   path: HMI_data

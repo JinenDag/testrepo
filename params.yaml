@@ -3,9 +3,9 @@ pretrained: False
 seed: 0
 imgsz: 640
 batch: 8
-epochs: 6
-optimizer: Adam # other choices=['SGD', 'Adam', 'AdamW', 'RMSProp']
+epochs: 5
+optimizer: SGD # other choices=['SGD', 'Adam', 'AdamW', 'RMSProp']
 lr0: 0.001  # learning rate
-name: 'yolov8n_exp_v0' # experiment name
+name: 'yolov8n_exp_v0275' # experiment name
 train_mode : 'Train'
 

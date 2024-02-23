@@ -10,9 +10,8 @@ def save_model(experiment_name: str):
     """ saves the weights of trained model to the models directory """
     if os.path.isdir('runs'):
         model_weights = experiment_name + "/weights/best.pt"
-        path_model_weights = os.path.join( "runs/detect", model_weights)
-
-        shutil.copyfile(src=path_model_weights, dst=f'{ROOT_DIR}/models/best.pt')
+        path_model_weights = os.path.join( "./runs/detect", model_weights)
+        shutil.copyfile(src=path_model_weights, dst='./models/best.pt')
 
 
 def save_metrics_and_params(experiment_name: str) -> None:

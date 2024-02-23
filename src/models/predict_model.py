@@ -6,7 +6,7 @@ from ultralytics import YOLO
 
 
 root_dir = Path(__file__).resolve().parents[1]  # root directory
-path_model_weights = os.path.join(root_dir, 'models/model.pt')
+path_model_weights = os.path.join(root_dir, 'models/best.pt')
 data_dir = os.path.join(root_dir, "HMI_data")
 test_data_path = os.path.join(data_dir, 'test/images')
 
