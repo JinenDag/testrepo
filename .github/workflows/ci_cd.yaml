@@ -1,0 +1,24 @@
+name: CML & DVC
+on: [push]
+jobs:
+  train-and-report:
+    runs-on: ubuntu-latest
+    # container: docker://ghcr.io/iterative/cml:0-dvc2-base1
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+      - uses: iterative/setup-cml@v1
+      - uses: iterative/setup-dvc@v1
+      - name: Install yolo
+        run: pip3 install ultralytics==8.0.58
+      - name: Install dependencies
+        run: pip3 install -r detection_model/requirements.txt
+      - name: Pull data from DVC
+        run: |
+          cd detection_model
+          dvc pull data
+      - name: Reproduce workflow
+        run: |
+          dvc repro --allow-missing --dry
