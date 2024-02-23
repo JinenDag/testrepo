@@ -15,6 +15,9 @@ jobs:
         run: pip3 install ultralytics==8.0.58
       - name: Install dependencies
         run: pip3 install -r requirements.txt
+      - name: Pull data from DVC
+        run: |
+          dvc pull data
       - name: Reproduce workflow
         run: |
           dvc repro --allow-missing --dry
